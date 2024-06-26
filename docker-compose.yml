@@ -1,0 +1,57 @@
+version: '1.0'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: drupal10001_mysql
+    restart: always
+    ports:
+      - "6001:3306"
+    environment:
+      MYSQL_DATABASE: drupal10001
+      MYSQL_USER: drupal10001
+      MYSQL_PASSWORD: drupal10001
+      MYSQL_ROOT_PASSWORD: drupal10001
+    volumes:
+      - db_data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: drupal10001_mysql_admin
+    restart: always
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: "1"
+    ports:
+      - 10991:80
+  drupal:
+    image: drupal:10.0-rc
+    container_name: drupal10001
+    ports:
+      - 10001:80
+    # working_dir: /opt/drupal
+    volumes:
+      # - ./drupal:/opt/drupal:z
+      # - drupal_modules:/var/www/html/drupal_modules
+      # - drupal_profiles:/var/www/html/drupal_profiles
+      # - drupal_themes:/var/www/html/drupal_themes
+      # - drupal_sites:/var/www/html/drupal_sites
+      # - ./web:/var/www/html
+      - ./drupal:/var/www/html
+    restart: always
+    # command: bash -c "composer update && rm /var/www/html && ln -s /opt/drupal/web /var/www/html && /usr/local/bin/apache2-foreground"
+
+volumes:
+  # drupal_modules:
+  # drupal_profiles:
+  # drupal_themes:
+  # drupal_sites:
+  db_data:
+  # drupal:
+  #   driver: local
+  #   driver_opts:
+  #     type: nfs
+  #     o: addr=192.168.1.1,rw,vers=4.1
+  #     device: ":./"
