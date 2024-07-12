@@ -1,39 +1,46 @@
+
 @font-face {
   font-family: "Inter Light";
   font-style: normal;
   font-weight: 300;
   src: url("../assets/fonts/Inter/Inter-Light.ttf");
 }
+
 @font-face {
   font-family: "Inter Regular";
   font-style: normal;
   font-weight: 300;
   src: url("../assets/fonts/Inter/Inter-Regular.ttf");
 }
+
 @font-face {
   font-family: "Inter Medium";
   font-style: normal;
   font-weight: 300;
   src: url("../assets/fonts/Inter/Inter-Medium.ttf");
 }
+
 @font-face {
   font-family: "Inter SemiBold";
   font-style: normal;
   font-weight: 300;
   src: url("../assets/fonts/Inter/Inter-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "Instrument Serif Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/InstrumentSerif/InstrumentSerif-Regular.ttf");
+  src: url("../assets/fonts/InstrumentSerif/InstrumentSerif-Regular.ttf")
 }
+
 @font-face {
   font-family: "Instrument Serif Italic";
   font-style: italic;
   font-weight: 400;
-  src: url("./assets/fonts/InstrumentSerif/InstrumentSerif-Italic.ttf");
+  src: url("./assets/fonts/InstrumentSerif/InstrumentSerif-Italic.ttf")
 }
+
 html {
   background-color: #fff;
 }
@@ -233,7 +240,7 @@ a {
   background-color: #ddd;
 }
 
-.main > .projects > .filters > li[active=true] {
+.main > .projects > .filters > li[active="true"] {
   color: #000;
   background-color: #ccc;
 }
@@ -251,7 +258,7 @@ a {
 
 .main > .projects > .grid > li {
   width: calc(33.33% - 16px);
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   border-radius: 16px;
   padding: 12px;
   background-color: #ddd;
@@ -269,7 +276,7 @@ a {
 .main > .projects > .grid > li > div {
   overflow: hidden;
   border-radius: 8px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
 }
 
 .main > .projects > .grid > li > div > img {
@@ -287,6 +294,7 @@ a {
 }
 
 /* Individual About Page */
+
 .about {
   display: flex;
   flex-direction: column;
@@ -353,7 +361,7 @@ a {
 .about > .content > .gallery {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 2.5/1;
+  aspect-ratio: 2.5 / 1;
   width: 100%;
   margin: 0 auto;
 }
@@ -461,11 +469,12 @@ a {
   transition: background-color 0.35s ease-in-out;
 }
 
-.about > .content > .gallery > .navigation > ul > li[active=true] {
+.about > .content > .gallery > .navigation > ul > li[active="true"] {
   background-color: #fff;
 }
 
 /* Single Page About Section */
+
 .about-single {
   display: flex;
   flex-direction: column;
@@ -515,7 +524,7 @@ a {
 .about-single > .gallery {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 2.5/1;
+  aspect-ratio: 2.5 / 1;
   width: 100%;
   margin: 0 auto;
 }
@@ -579,11 +588,12 @@ a {
   transition: background-color 0.35s ease-in-out;
 }
 
-.about-single > .gallery > .navigation > ul > li[active=true] {
+.about-single > .gallery > .navigation > ul > li[active="true"] {
   background-color: #fff;
 }
 
 /* GALLERY VER. 1 */
+
 /*
 .about > .content > .gallery {
   background: #e2e2e2;
@@ -633,6 +643,7 @@ a {
   border-radius: 8%;
 }
 */
+
 /*
 CLIENT CAROUSEL
 
@@ -692,6 +703,7 @@ CLIENT CAROUSEL
   filter: grayscale(100%) brightness(0%);
 }
 */
+
 .contact-single {
   background-color: #f4f4f4;
   border-radius: 32px;
@@ -780,7 +792,7 @@ CLIENT CAROUSEL
 }
 
 .contact-single > div:nth-of-type(3) > section:nth-of-type(2) > div > form > section:nth-of-type(2) > textarea {
-  aspect-ratio: 4/1;
+  aspect-ratio: 4 / 1;
 }
 
 .contact-single > div:nth-of-type(3) > section:nth-of-type(2) > div > form > section:nth-of-type(3) > button {
@@ -903,7 +915,7 @@ CLIENT CAROUSEL
 }
 
 .contact > .content > div:nth-of-type(3) > section:nth-of-type(2) > div > form > section:nth-of-type(2) > textarea {
-  aspect-ratio: 4/1;
+  aspect-ratio: 4 / 1;
 }
 
 .contact > .content > div:nth-of-type(3) > section:nth-of-type(2) > div > form > section:nth-of-type(3) > button {
@@ -957,11 +969,13 @@ CLIENT CAROUSEL
     width: 100%;
   }
 }
+
 @media screen and (max-width: 1280px) {
   .main > .projects > .grid > li {
     width: calc(50% - 16px);
   }
 }
+
 @media screen and (max-width: 1024px) {
   .about > .content > div > section:nth-of-type(1) > p,
   .contact > .content > div > section:nth-of-type(1) > p {
@@ -993,6 +1007,7 @@ CLIENT CAROUSEL
     font-size: 17px;
   }
 }
+
 @media screen and (max-width: 826px) {
   .about-single {
     padding: 0 0 64px 0;
@@ -1051,7 +1066,7 @@ CLIENT CAROUSEL
     width: 100%;
   }
   .contact > .content > div > section:nth-of-type(2) textarea {
-    aspect-ratio: 3/1 !important;
+    aspect-ratio: 3 / 1 !important;
   }
   .contact-single {
     padding: 0 48px;
@@ -1065,7 +1080,7 @@ CLIENT CAROUSEL
     width: 100%;
   }
   .contact-single > div > section:nth-of-type(2) textarea {
-    aspect-ratio: 3/1 !important;
+    aspect-ratio: 3 / 1 !important;
   }
   .carouselText {
     gap: 16px;
@@ -1078,6 +1093,7 @@ CLIENT CAROUSEL
     font-size: 16px;
   }
 }
+
 @media screen and (max-width: 632px) {
   .header > h2 > a {
     font-size: 17px;
@@ -1118,5 +1134,3 @@ CLIENT CAROUSEL
     font-size: 15px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
